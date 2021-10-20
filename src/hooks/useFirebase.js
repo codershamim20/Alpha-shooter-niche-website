@@ -13,7 +13,8 @@ const useFirebase = () => {
     
     // console.log(user);
 
-    const googleSignIn = () => {
+    const googleSignIn = (e) => {
+        e.preventDefault();
         setIsLoading(true)
         const googleProvider = new GoogleAuthProvider();
         signInWithPopup(auth, googleProvider)
