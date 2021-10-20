@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Card } from 'react-bootstrap';
+import { Button, Card, Image } from 'react-bootstrap';
 import Banner from '../Banner/Banner';
 import Services from '../Services/Services';
 
@@ -9,9 +9,13 @@ const Home = () => {
         <div>
             <Banner></Banner>
             <Services></Services>
-            <Card className="text-center my-3">
-        <Card.Header> <h1>Welcome to
-            Meni Derma Clinic</h1> </Card.Header>
+            <Card className="text-center my-5 ">
+                
+                <Card.Img className="100%" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT10Obz4Pr2-zrjpojoivNIM-0Nu4r9yQTUqQ&usqp=CAU" alt="Card image" />
+                <Card.ImgOverlay  >
+                    <h1 >Welcome to
+                    Meni Derma Clinic</h1> 
+                    
         <Card.Body>
         <Card.Title>Special treatment</Card.Title>
         <Card.Text>Revitalise SkinCare Clinic Ltd is a CQC registered (Care Quality Commission), exclusive, well established medical aesthetic clinic based in Bath and Wiltshire. Founded in 2013 by Arvin Hassanpour, we are experts in medical facial aesthetics.
@@ -22,8 +26,9 @@ const Home = () => {
         </Card.Text>
         
     </Card.Body>
-    
-    </Card>
+    </Card.ImgOverlay>
+            </Card>
+            
             <Card className="text-center b-0">                
                 <Card.Body>
                 <img className="img-fluid" src="https://secure.toolkitfiles.co.uk/clients/34066/siteimages/large/save-face1.png?2a064e" alt="" />

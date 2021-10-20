@@ -1,12 +1,11 @@
 
 import React, { useState } from 'react';
-// import authInit from '../Login/firebase/firebase.init';
+
 import { getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword } from "firebase/auth";
 import {  Form } from 'react-bootstrap';
-import useAuth from '../../hooks/useAuth';
+
 import useFirebase from '../../hooks/useFirebase';
-import { Link } from 'react-router-dom';
-// authInit();
+
 
 const Login = () => {
   const { user,
@@ -37,7 +36,7 @@ const Login = () => {
     
   const handleUserRegister = (e) => {
     // e.preventDefault();
-    
+    console.log(email,password)
     createUserWithEmailAndPassword(auth, email, password)
   .then(result => {
     const user = result.user;
@@ -59,7 +58,8 @@ const Login = () => {
 
         <div className="div d-flex justify-content-center align-items-center">
       <div className="row ">
-        <div className="col-md-10">
+          <div className="col-md-10 bg-light">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3jabCF5UQ_5E-OqxySND71-UO6fh7d7Mf6A&usqp=CAU" alt="" />
             <div>
                <h2 className="text-primary">Please { isLogin?"Login":"Register"}</h2>
               <Form onSubmit={handleUserRegister}>
@@ -89,7 +89,7 @@ const Login = () => {
             </div>
             </Form>
               <div >
-              { user.displayName?<Link onClick={logOut} className="nav-link" to="/login">{user.displayName} Logout</Link> : <Link className="nav-link" to="/login">Login</Link>}
+              
                 {/* <h1> Name{ user.displayName}</h1> */}
           <button
                 onClick={googleSignIn}

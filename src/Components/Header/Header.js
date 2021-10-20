@@ -14,12 +14,12 @@ const Header = () => {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="me-auto">
-    <Link className="nav-link active" to="/">Home</Link>
-    <Link className="nav-link" to="/about">About</Link>
+    <Link className="nav-link active hover" to="/">Home</Link>
+    <Link className="nav-link hover" to="/about">About</Link>
     <Link className="nav-link" to="/services">Services</Link>
     <Link className="nav-link" to="/bodycare">BodyCare</Link>
     <Link className="nav-link" to="/register">Register</Link>
-    { user.displayName?<Link onClick={logOut} className="nav-link" to="/login">{user.displayName} Logout</Link> : <Link className="nav-link" to="/login">Login</Link>}
+    { user.displayName?<Link onClick={logOut} className="nav-link bg-success" to="/login">{user.displayName} Logout</Link> : <Link className="nav-link bg-success rounded-2" to="/login">Login</Link>}
     
     </Nav>
     </Navbar.Collapse>

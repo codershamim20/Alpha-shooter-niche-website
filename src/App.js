@@ -47,7 +47,7 @@ function App() {
           <Route path='/login'>
           <Login></Login>
             </Route>
-            <PrivetRoute path="/bookVehicle/:id">
+            <PrivetRoute path="/servicedetail/:id">
             <ServiceDetail></ServiceDetail>
           </PrivetRoute>
           <Route path='*'>

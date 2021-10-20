@@ -50,10 +50,11 @@ const Register = () => {
   }
   
     return (
-
-        <div className="div d-flex justify-content-center align-items-center">
+ 
+        <div className="div d-flex justify-content-center align-items-center ">
       <div className="row ">
-        <div className="col-md-10">
+          <div className="col-md-10 bg-light">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3jabCF5UQ_5E-OqxySND71-UO6fh7d7Mf6A&usqp=CAU" alt="" />
                     <div>
                         <h2 className="text-primary">Please { isLogin?"Login":"Register"}</h2>
               <Form onSubmit={handleUserRegister}>
@@ -76,7 +77,7 @@ const Register = () => {
                 <input type="submit" value={isLogin?"Login":"Register"}/> <br/>
                 
                   </div>
-                  { member.email?<Link onClick={logOut} className="nav-link" to="/">{member.email} Logout</Link> : <Link className="nav-link" to="/login">Login</Link>}
+                  
               <div className="form-check">
                     <input onChange={toggleLogin} className="form-check-input " type="checkbox" />
                   <label>Already Registered?Please Check the box for Login</label>                  
@@ -84,7 +85,6 @@ const Register = () => {
             </div>
             </Form>
               <div >
-              { user.displayName?<Link onClick={logOut} className="nav-link" to="/login">{user.displayName} Logout</Link> : <Link className="nav-link" to="/login">Login</Link>}
               <button
                 onClick={googleSignIn}
                 className="btn btn-warning mb-5"
