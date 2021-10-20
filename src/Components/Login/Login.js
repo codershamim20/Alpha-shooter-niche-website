@@ -11,18 +11,12 @@ const Login = () => {
   const { user,
     googleSignIn,
     isLoading,
-  logOut } = useFirebase();
-  // console.log(user)
-  // const[user,setUser]=useState({})
+    logOut } = useFirebase();
+  const [message, setMessage] = useState('');
   const auth = getAuth();
-  // const [user, setUser] = useState({});
     const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isLogin, setIsLogin] = useState(false);
-    // const {user,
-       
-    //     isLoading,
-    //     logOut } = useFirebase();
   const handleEmail = e => {
             setEmail(e.target.value)
           }    
@@ -33,27 +27,35 @@ const Login = () => {
         setIsLogin(e.target.checked)
     }
   
-    
+  const submit = (e) => {
+    e.preventDefault();
+    isLogin ? processLogin(email, password) : handleUserRegister(email, password)
+  }  
   const handleUserRegister = (e) => {
-    // e.preventDefault();
-    console.log(email,password)
     createUserWithEmailAndPassword(auth, email, password)
   .then(result => {
     const user = result.user;
     console.log(user)
+    setMessage("Registered Successfully")
   })
-  const processLogin = e => {
-    signInWithEmailAndPassword(auth, email, password)
-        .then(result => {
-            const user = result.user;
-            console.log(user)
+      .catch(error => {
+      setMessage(error.message)
     })
-}
-
-  isLogin ? processLogin(email, password) : handleUserRegister(email, password)
+   
     
   }
-  
+  const processLogin = e => {
+    // e.preventDefault();
+  signInWithEmailAndPassword(auth, email, password)
+      .then(result => {
+          const user = result.user;
+        console.log(user)
+        setMessage("Logeed In Successfully")
+      })
+      .catch(error => {
+        setMessage(error.message)
+      })
+}
     return (
 
         <div className="div d-flex justify-content-center align-items-center">
@@ -62,7 +64,7 @@ const Login = () => {
           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3jabCF5UQ_5E-OqxySND71-UO6fh7d7Mf6A&usqp=CAU" alt="" />
             <div>
                <h2 className="text-primary">Please { isLogin?"Login":"Register"}</h2>
-              <Form onSubmit={handleUserRegister}>
+              <Form onSubmit={submit}>
             <div className="form-input mt-5">
               <input
                 onBlur={handleEmail}
@@ -77,7 +79,8 @@ const Login = () => {
                 type="password"
                 placeholder="Password"
               />
-              <br />
+                  <br />
+                  {message && <p>{ message}</p>}
               <div className="login-regiater-btn m-4">
                 <input type="submit" value={isLogin?"Login":"Register"}/> <br/>
                 
