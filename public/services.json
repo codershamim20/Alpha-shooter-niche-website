@@ -1,0 +1,57 @@
+[
+    {
+      "id":1,
+      "courses":"Cosmetic Treatment",
+      "duration":"2 month",
+      "rating":"5 Star",
+      
+      "country":"USA",
+      "img":"https://41zz543enuttlqrp2nkjet9i-wpengine.netdna-ssl.com/wp-content/uploads/2019/06/service-img-cap1.jpg"
+    },
+    {
+      "id":2,
+      "courses":"Moles Treatment",
+      "duration":"3 month",
+      "rating":"5 Star",
+      
+      "country":"UK",
+      "img":"https://41zz543enuttlqrp2nkjet9i-wpengine.netdna-ssl.com/wp-content/uploads/2019/07/home-service-2.jpg"
+    },
+    {
+      "id":3,
+      "courses":"Anti Aging",
+      "duration":"4 month",
+      "rating":"5 Star",
+      
+      "country":"USA",
+      "img":"https://41zz543enuttlqrp2nkjet9i-wpengine.netdna-ssl.com/wp-content/uploads/2019/07/home-service-4.jpg"
+    },
+    {
+      "id":4,
+      "courses":"Hair Treatment",
+      "duration":"2.5 month",
+      "rating":"5 Star",
+      
+      "country":"USA",
+      "img":"https://41zz543enuttlqrp2nkjet9i-wpengine.netdna-ssl.com/wp-content/uploads/2019/07/home-service-3.jpg"
+    },
+    {      
+      "id":5,
+      "courses":"Skin Treatment",
+      "duration":"4 month",
+      "rating":"5 Star",
+      
+      "country":"USA",
+      "img":"https://previews.123rf.com/images/ferli/ferli1211/ferli121100232/16245001-beautiful-women-applying-moisturizer-cosmetic-cream-on-face.jpg"
+    },
+    {
+      "id":6,
+      "courses":"Hydrafacial",
+      "duration":"4 month",
+      "rating":"5 Star",
+      
+      "country":"USA",
+      "img":"https://www.fashiongonerogue.com/wp-content/uploads/2019/03/Model-Face-Cream-Beauty.jpg"
+    }
+    
+  ]

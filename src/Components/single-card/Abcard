@@ -1,0 +1,30 @@
+import React from 'react';
+
+const Abcard = (props) => {
+    const{name,img,country,rating,designation,salary}=props.Abcard||{}
+    // console.log(props.Abcard)
+    return (
+        <div className="col-md-3">
+            <div className="card mb-3 h-100 bg-secondary" >
+  <div className="row  ">
+    <div className="col-md-5">
+      <img src={img} className="img-fluid rounded-start" alt="..."/>
+    </div>
+    <div className="col-md-7">
+      <div className="card-body">
+        <h5 className="card-title">Name: {name}</h5>
+        <p className="card-text">Role: {designation}</p>
+        <p className="card-text">{country} </p>
+        <p className="card-text">Rating: {rating} </p>
+        <p className="card-text">Salary: ${salary}</p>
+        <button type="button"
+        className="btn btn-primary"> Details</button>
+      </div>
+    </div>
+  </div>
+</div>
+        </div>
+    );
+};
+
+export default Abcard;
