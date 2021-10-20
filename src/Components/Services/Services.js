@@ -12,6 +12,7 @@ const Services = () => {
         .then(data=>setCards(data))
     },[])
     return (
+       
         <div>
             <h2 className='text-center my-5'>OUR SERVICES</h2>
             <div className="row m-5">
@@ -33,6 +34,7 @@ const Services = () => {
                 </div>
             </div>
         </div>
+    
     );
 };
 

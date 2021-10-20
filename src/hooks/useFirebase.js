@@ -11,7 +11,7 @@ const useFirebase = () => {
   
     const [isLoading, setIsLoading] = useState(true);
     
-    
+    // console.log(user);
 
     const googleSignIn = () => {
         setIsLoading(true)

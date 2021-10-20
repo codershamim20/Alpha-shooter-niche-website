@@ -1,15 +1,22 @@
 
 import React, { useState } from 'react';
-// import useFirebase from '../../hooks/useFirebase';
-import authInit from '../Login/firebase/firebase.init';
+// import authInit from '../Login/firebase/firebase.init';
 import { getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword } from "firebase/auth";
 import {  Form } from 'react-bootstrap';
 import useAuth from '../../hooks/useAuth';
-authInit();
+import useFirebase from '../../hooks/useFirebase';
+import { Link } from 'react-router-dom';
+// authInit();
 
 const Login = () => {
-  const { googleSignIn } = useAuth();
-  const[user,setUser]=useState({})
+  const { user,
+    googleSignIn,
+    isLoading,
+  logOut } = useFirebase();
+  // console.log(user)
+  // const[user,setUser]=useState({})
+  const auth = getAuth();
+  // const [user, setUser] = useState({});
     const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isLogin, setIsLogin] = useState(false);
@@ -26,21 +33,21 @@ const Login = () => {
     const toggleLogin = e => {
         setIsLogin(e.target.checked)
     }
-  const auth = getAuth();
+  
     
   const handleUserRegister = (e) => {
-    // e.preventDefault;
+    // e.preventDefault();
     
     createUserWithEmailAndPassword(auth, email, password)
   .then(result => {
     const user = result.user;
-    setUser(user)
+    console.log(user)
   })
   const processLogin = e => {
     signInWithEmailAndPassword(auth, email, password)
         .then(result => {
             const user = result.user;
-            setUser(user)
+            console.log(user)
     })
 }
 
@@ -82,7 +89,8 @@ const Login = () => {
             </div>
             </Form>
               <div >
-                <h1>{ user.email}</h1>
+              { user.displayName?<Link onClick={logOut} className="nav-link" to="/login">{user.displayName} Logout</Link> : <Link className="nav-link" to="/login">Login</Link>}
+                {/* <h1> Name{ user.displayName}</h1> */}
           <button
                 onClick={googleSignIn}
                 className="btn btn-warning mb-5"

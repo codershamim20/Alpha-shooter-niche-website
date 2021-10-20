@@ -5,10 +5,12 @@ import authInit from '../Login/firebase/firebase.init';
 import './Register.css'
 import { getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword } from "firebase/auth";
 import { Button, Form } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 authInit();
 
 const Register = () => {
+  const[member,setMember]=useState({})
     const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isLogin, setIsLogin] = useState(false);
@@ -32,14 +34,14 @@ const Register = () => {
     
     createUserWithEmailAndPassword(auth, email, password)
   .then(result => {
-    const user = result.user;
-    console.log(user)
+    const member = result.member;
+    console.log(member)
   })
   const processLogin = e => {
     signInWithEmailAndPassword(auth, email, password)
         .then(result => {
-            const user = result.user;
-            console.log(user)
+            const member = result.member;
+            console.log(member)
     })
 }
 
@@ -73,14 +75,16 @@ const Register = () => {
               <div className="login-regiater-btn m-4">
                 <input type="submit" value={isLogin?"Login":"Register"}/> <br/>
                 
-              </div>
+                  </div>
+                  { member.email?<Link onClick={logOut} className="nav-link" to="/">{member.email} Logout</Link> : <Link className="nav-link" to="/login">Login</Link>}
               <div className="form-check">
                     <input onChange={toggleLogin} className="form-check-input " type="checkbox" />
                   <label>Already Registered?Please Check the box for Login</label>                  
               </div>
             </div>
             </Form>
-            <div >
+              <div >
+              { user.displayName?<Link onClick={logOut} className="nav-link" to="/login">{user.displayName} Logout</Link> : <Link className="nav-link" to="/login">Login</Link>}
               <button
                 onClick={googleSignIn}
                 className="btn btn-warning mb-5"

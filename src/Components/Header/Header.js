@@ -5,10 +5,10 @@ import useFirebase from '../../hooks/useFirebase';
 
 const Header = () => {
   const { logOut, user } = useFirebase();
-  
+  // console.log(user)
   return (
     <>
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" sticky="top">
+    <Navbar collapseOnSelect expand="lg" bg="light"  sticky="top">
         <Container>
           <Link className="navbar-brand container " to="/home"><img className="img-fluid" width="120" height="80" src="https://41zz543enuttlqrp2nkjet9i-wpengine.netdna-ssl.com/wp-content/themes/meni/images/logo.png" alt="" /></Link>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -19,7 +19,7 @@ const Header = () => {
     <Link className="nav-link" to="/services">Services</Link>
     <Link className="nav-link" to="/bodycare">BodyCare</Link>
     <Link className="nav-link" to="/register">Register</Link>
-    { user.email?<Link onClick={logOut} className="nav-link" to="/login">{user.displayName} Logout</Link> : <Link className="nav-link" to="/login">Login</Link>}
+    { user.displayName?<Link onClick={logOut} className="nav-link" to="/login">{user.displayName} Logout</Link> : <Link className="nav-link" to="/login">Login</Link>}
     
     </Nav>
     </Navbar.Collapse>
