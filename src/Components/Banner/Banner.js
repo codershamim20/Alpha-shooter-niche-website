@@ -10,47 +10,35 @@ const Banner = () => {
   <Carousel.Item>
     <img
       className="d-block w-100"
-      src="https://www.foreveryoungsc.com/wp-content/uploads/FY-vivace-ptb-600-v2.jpg"
+      src="https://www.obokash.com/imgs/banners/travel-agent-in-bangladesh.jpg"
       alt="First slide"
     />
     <Carousel.Caption >
-      <h3>WELCOME TO THE WORLDS BEST DERMA CLINIC</h3>
+      <h3>BEST TRAVEL AGENT</h3>
       <p>CUSTOMER SATISFACTION IS OUR PRIORITY</p>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
     <img
       className="d-block w-100"
-      src="https://www.foreveryoungsc.com/wp-content/uploads/FY-botox-ptb-600.jpg"
+      src="https://www.obokash.com/imgs/banners/international-tour-packages-from-bangladesh.jpg"
       alt="Second slide"
     />
 
     <Carousel.Caption >
-    <h3>WELCOME TO THE WORLDS BEST DERMA CLINIC</h3>
+    <h3>BEST TRAVEL AGENT</h3>
       <p>CUSTOMER SATISFACTION IS OUR PRIORITY</p>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
     <img
       className="d-block w-100"
-      src="https://www.foreveryoungsc.com/wp-content/uploads/FY-hydrafacial-ptb-600.jpg"
+      src="https://www.obokash.com/imgs/banners/umrah-packages-from-bangladesh.jpg"
       alt="Third slide"
     />
 
     <Carousel.Caption>
-    <h3>WELCOME TO THE WORLDS BEST DERMA CLINIC</h3>
-      <p>CUSTOMER SATISFACTION IS OUR PRIORITY</p>
-    </Carousel.Caption>
-  </Carousel.Item>
-  <Carousel.Item>
-    <img
-      className="d-block w-100"
-      src="https://www.foreveryoungsc.com/wp-content/uploads/FY-coolsculpting-ptb-600.jpg"
-      alt="Third slide"
-    />
-
-    <Carousel.Caption>
-    <h3>WELCOME TO THE WORLDS BEST DERMA CLINIC</h3>
+    <h3>BEST TRAVEL AGENT</h3>
       <p>CUSTOMER SATISFACTION IS OUR PRIORITY</p>
     </Carousel.Caption>
   </Carousel.Item>

@@ -12,12 +12,11 @@ import {
 } from "react-router-dom";
 import NotFound from './Components/NotFound/NotFound';
 import Services from './Components/Services/Services';
-import Bodycare from './Components/BodyCare/Bodycare';
 import Login from './Components/Login/Login';
 import AuthProvider from './Context/AuthProvider';
 import ServiceDetail from './Components/ServiceDetail/ServiceDetail'
 import PrivetRoute from './Components/Login/PrivetRoute/PrivetRoute';
-import Register from './Components/Register/Register';
+import AddService from './Components/AddService/AddService';
 
 function App() {
   return (
@@ -35,15 +34,12 @@ function App() {
           <Route  path="/about">
           <About></About>
           </Route>
-          <Route  path='/bodycare'>
-            <Bodycare></Bodycare>
+            <Route path="/addservice">
+              <AddService></AddService>
           </Route>
           <Route  path='/services'>
           <Services></Services>
-          </Route>
-          <Route  path='/register'>
-          <Register></Register>
-          </Route>
+            </Route>
           <Route path='/login'>
           <Login></Login>
             </Route>

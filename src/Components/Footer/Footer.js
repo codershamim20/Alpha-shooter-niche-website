@@ -14,13 +14,13 @@ const Footer = () => {
   <li className="list-group-item ">Body Care</li>
   
 </ul></div>
-          <div className="col-5 mx-auto my-auto">MENI DERMA CLINIC
+          <div className="col-5 mx-auto my-auto">BEST TRAVEL AGENT
           
           </div>
                 <div className="col-4 my-auto mx-auto"><i class="fab fa-facebook"></i> <br/><i className="fab fa-instagram-square"></i>
-                <Link className="navbar-brand container " to="/home"><img className="img-fluid" width="120" height="80" src="https://41zz543enuttlqrp2nkjet9i-wpengine.netdna-ssl.com/wp-content/themes/meni/images/logo.png" alt="" /></Link>
+                <Link className="navbar-brand container " to="/home"><img className="img-fluid" width="120" height="80" src="https://www.obokash.com/images/logo.png" alt="" /></Link>
                 </div>
-                <small className="mx-auto">&copy; Copyright 2021, MENI DERMA CLINIC</small>
+                <small className="mx-auto">&copy; Copyright 2021, BEST TRAVEL</small>
   </div>
 </div>
         
