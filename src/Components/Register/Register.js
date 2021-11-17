@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React, { useState } from 'react';
 
@@ -106,3 +107,5 @@ import { NavLink, useHistory } from 'react-router-dom';
 };
 
 export default Register;
+=======
+>>>>>>> a6b5dbc676a926d9ec41bf33fd707c9987ebd38b

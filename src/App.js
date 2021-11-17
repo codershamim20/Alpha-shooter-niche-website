@@ -10,12 +10,17 @@ import {
   Route
 } from "react-router-dom";
 import NotFound from './Components/NotFound/NotFound';
+<<<<<<< HEAD
 import Services from './Components/Products/Products';
 import Contactus from './Components/ContactUs/Contactus';
+=======
+import Services from './Components/Services/Services';
+>>>>>>> a6b5dbc676a926d9ec41bf33fd707c9987ebd38b
 import Login from './Components/Login/Login';
 import AuthProvider from './Context/AuthProvider';
 import ServiceDetail from './Components/ProductDetails/Productdetails'
 import PrivetRoute from './Components/Login/PrivetRoute/PrivetRoute';
+<<<<<<< HEAD
 import Register from './Components/Register/Register';
 import Reviews from './Components/Reviews/Reviews';
 import Addreviews from './Components/Addreviews/Addreviews';
@@ -24,6 +29,9 @@ import Myorder from './Components/Allorders/Myorder';
 import Dashbaord from './Components/Dasboard/Dashbaord';
 import MakeAdmin from './Components/MakeAdmin/MakeAdmin';
 import ManageProduct from './Components/ManageProduct.js/ManageProduct';
+=======
+import AddService from './Components/AddService/AddService';
+>>>>>>> a6b5dbc676a926d9ec41bf33fd707c9987ebd38b
 
 function App() {
   return (
@@ -41,11 +49,17 @@ function App() {
           <Route  path="/about">
           <About></About>
           </Route>
+<<<<<<< HEAD
           <Route  path='/contactus'>
             <Contactus></Contactus>
+=======
+            <Route path="/addservice">
+              <AddService></AddService>
+>>>>>>> a6b5dbc676a926d9ec41bf33fd707c9987ebd38b
           </Route>
           <Route  path='/products'>
           <Services></Services>
+<<<<<<< HEAD
           </Route>
           <Route  path='/reviews'>
           <Addreviews></Addreviews>
@@ -56,6 +70,9 @@ function App() {
           <Route  path='/makeadmin'>
           <MakeAdmin></MakeAdmin>
           </Route>
+=======
+            </Route>
+>>>>>>> a6b5dbc676a926d9ec41bf33fd707c9987ebd38b
           <Route path='/login'>
           <Login></Login>
             </Route>

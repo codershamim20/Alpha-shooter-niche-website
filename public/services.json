@@ -1,11 +1,17 @@
 [
     {
       "id":1,
+<<<<<<< HEAD
       "Model":"Sony A1",
       "duration":"2 month",
+=======
+      "services":"Umrah package-07 days",
+      "duration":"07 days",
+>>>>>>> a6b5dbc676a926d9ec41bf33fd707c9987ebd38b
       "rating":"5 Star",
       "price":"100",
       
+<<<<<<< HEAD
       "country":"USA",
       "img":"https://alphashooters.b-cdn.net/wp-content/uploads/2021/01/sony-a1-front-1280px-400x300.jpg"
     },
@@ -107,6 +113,55 @@
       "price":"100",
       "country":"USA",
       "img":"https://alphashooters.b-cdn.net/wp-content/uploads/2020/12/sony-a9-1280px-400x300.jpg"
+=======
+      "country":"KSA",
+      "img":"https://www.obokash.com/imgs/packages/umrah-package-07-days.jpg"
+    },
+    {
+      "id":2,
+      "services":"Umrah package-10 days",
+      "duration":"10 days",
+      "rating":"5 Star",
+      
+      "country":"KSA",
+      "img":"https://www.obokash.com/imgs/packages/umrah-package-10-days.jpg"
+    },
+    {
+      "id":3,
+      "services":"Umrah-Dubai package-15 days",
+      "duration":"15 days",
+      "rating":"5 Star",
+      
+      "country":"KSA & DUBAI",
+      "img":"https://www.obokash.com/imgs/packages/umrah-dubai-package-15-days.jpg"
+    },
+    {
+      "id":4,
+      "services":"Umrah-Egypt package-15 days",
+      "duration":"15 days",
+      "rating":"5 Star",
+      
+      "country":"KSA & EGYPT",
+      "img":"https://www.obokash.com/imgs/packages/umrah-egypt-package-15-days.jpg"
+    },
+    {      
+      "id":5,
+      "services":"Umrah-Turkey package-15 days",
+      "duration":"15 days",
+      "rating":"5 Star",
+      
+      "country":"KSA & Turkey",
+      "img":"https://www.obokash.com/imgs/packages/umrah-turkey-package-15-days.jpg"
+    },
+    {
+      "id":6,
+      "services":"Ramadan Umrah-package-07 days",
+      "duration":"7 days",
+      "rating":"5 Star",
+      
+      "country":"KSA",
+      "img":"https://www.obokash.com/imgs/packages/ramadan-umrah-package-07-days.jpg"
+>>>>>>> a6b5dbc676a926d9ec41bf33fd707c9987ebd38b
     }
     
   ]

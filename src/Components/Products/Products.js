@@ -7,7 +7,11 @@ const Products = () => {
     
     
     useEffect(() => {
+<<<<<<< HEAD:src/Components/Products/Products.js
         fetch('http://localhost:7000/productsdata')
+=======
+        fetch('http://localhost:5000/services')
+>>>>>>> a6b5dbc676a926d9ec41bf33fd707c9987ebd38b:src/Components/Services/Services.js
             .then(res => res.json())
         .then(data=>setCards(data))
     }, [])
@@ -22,7 +26,7 @@ const Products = () => {
                     <div className="row g-3">
                         {
                             cards.map(card => <Card
-                                key={card.id}
+                                key={card._id}
                                 card={card}
                             >
 
