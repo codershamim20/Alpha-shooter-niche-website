@@ -7,20 +7,20 @@ const Services = () => {
     
     
     useEffect(() => {
-        fetch('./services.json')
+        fetch('http://localhost:7000/productsdata')
             .then(res => res.json())
         .then(data=>setCards(data))
     },[])
     return (
        
         <div>
-            <h2 className='text-center my-5'>OUR SERVICES</h2>
+            <h2 className='text-center my-5'>OUR PRODUCTS</h2>
             <div className="row m-5">
                 <div className="col-md-12">
                     {/* card-display-area */}
                     <div className="row g-3">
                         {
-                            cards.map(card => <Card
+                            cards.slice(0,6).map(card => <Card
                                 key={card.id}
                                 card={card}
                             >

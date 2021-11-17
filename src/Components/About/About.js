@@ -1,13 +1,11 @@
 import React from 'react';
-import ASer from './ASer';
 
 const About = () => {
     return (
         <div className="text-center">
                         
-            <h1  >Our Team</h1>
-            <ASer></ASer>
-            <img width="100%" src="https://foreveryoungsc.com/wp-content/uploads/2014/04/about.jpg" alt="" />
+            <h1>ABOUT</h1>
+            <img width="100%" src="https://alphashooters.b-cdn.net/wp-content/uploads/2021/11/sony-fe-40mm-f2-5-g-lens-review-1280px-400x300.jpg" alt="" />
         </div>
     );
 };
