@@ -1,12 +1,8 @@
 
 import { useState, useEffect } from 'react';
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, GoogleAuthProvider, signInWithPopup, updateProfile, getIdToken, signOut } from "firebase/auth";
-// import { initializeApp } from "@firebase/app";
 import authInit from '../Components/Login/firebase/firebase.init';
 
-
-// initialize firebase app
-// initializeApp();
 authInit();
 const useFirebase = () => {
     const [user, setUser] = useState({});
@@ -88,7 +84,7 @@ const useFirebase = () => {
     }, [auth])
 
     useEffect(() => {
-        fetch(`http://localhost:7000/addUserInfo/${user.email}`)
+        fetch(`https://fierce-cliffs-19562.herokuapp.com/addUserInfo/${user.email}`)
             .then(res => res.json())
             .then(data => setAdmin(data.admin))
     }, [user.email])
@@ -105,7 +101,7 @@ const useFirebase = () => {
 
     const saveUser = (email, displayName, method) => {
         const user = { email, displayName };
-        fetch('http://localhost:7000/addUserInfo', {
+        fetch('https://fierce-cliffs-19562.herokuapp.com/addUserInfo', {
             method: method,
             headers: {
                 'content-type': 'application/json'

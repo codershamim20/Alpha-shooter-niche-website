@@ -11,14 +11,14 @@ const Productdetail = () => {
     
     const [cards , setCards] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:7000/productdetail/${id}`)
+        fetch(`https://fierce-cliffs-19562.herokuapp.com/productdetail/${id}`)
             .then(res => res.json())
         .then(data=>setCards(data))
     },[id])
   const { Model, img, country, duration, rating} = cards || {}
   const onSubmit = data => {
     console.log(data);
-    axios.post('http://localhost:7000/allorders', data)
+    axios.post('https://fierce-cliffs-19562.herokuapp.com/allorders', data)
         .then(res => {
             // console.log(res);
             if (res.data.insertedId) {

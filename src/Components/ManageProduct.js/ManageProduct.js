@@ -4,12 +4,12 @@ import Card from '../single-card/Card';
 const ManageProduct = () => {
     const [cards, setCards] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:7000/productsdata')
+        fetch('https://fierce-cliffs-19562.herokuapp.com/productsdata')
             .then(res => res.json())
      .then(data=>setCards(data))   
     }, [])
     const handleDelete = id => {
-        const url = `http://localhost:7000/productsdata/${id}`
+        const url = `https://fierce-cliffs-19562.herokuapp.com/productsdata/${id}`
         fetch(url, {
           method:"DELETE"
         })

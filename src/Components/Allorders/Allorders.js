@@ -3,12 +3,12 @@ import React, { useEffect, useState } from 'react';
 const Allorders = (props) => {
     const [orders, setOrders] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:7000/allorders")
+    fetch("https://fierce-cliffs-19562.herokuapp.com/allorders")
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, []);
   const handleDelete = id => {
-    const url = `http://localhost:7000/allorders/${id}`
+    const url = `https://fierce-cliffs-19562.herokuapp.com/allorders/${id}`
     fetch(url, {
       method:"DELETE"
     })

@@ -7,7 +7,7 @@ const Products = () => {
     
     
     useEffect(() => {
-        fetch('http://localhost:7000/productsdata')
+        fetch('https://fierce-cliffs-19562.herokuapp.com/productsdata')
             .then(res => res.json())
         .then(data=>setCards(data))
     }, [])

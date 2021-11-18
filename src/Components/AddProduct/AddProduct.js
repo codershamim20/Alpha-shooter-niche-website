@@ -8,7 +8,7 @@ const AddProduct = () => {
 
     const onSubmit = data => {
         console.log(data);
-        axios.post('http://localhost:7000/productsdata', data)
+        axios.post('https://fierce-cliffs-19562.herokuapp.com/productsdata', data)
             .then(res => {
                 // console.log(res);
                 if (res.data.insertedId) {

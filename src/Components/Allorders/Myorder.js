@@ -8,13 +8,13 @@ const Myorder = (props) => {
   const [myorders, setMyorders] = useState([])
   
   useEffect(() => {
-    fetch(`http://localhost:7000/allorders?email=${user?.email}`)
+    fetch(`https://fierce-cliffs-19562.herokuapp.com/allorders?email=${user?.email}`)
       .then((res) => res.json())
       .then((data) => setMyorders(data));
   }, [user?.email]);
 // console.log(user?.email)
 const handleDelete = id => {
-  const url = `http://localhost:7000/allorders/${id}`
+  const url = `https://fierce-cliffs-19562.herokuapp.com/allorders/${id}`
   fetch(url, {
     method:"DELETE"
   })

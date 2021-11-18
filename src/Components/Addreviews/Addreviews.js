@@ -9,7 +9,7 @@ const Addreviews = () => {
 
     const onSubmit = data => {
         // console.log(data);
-        axios.post('http://localhost:7000/reviews', data)
+        axios.post('https://fierce-cliffs-19562.herokuapp.com/reviews', data)
             .then(res => {
                 // console.log(res);
                 if (res.data.insertedId) {
