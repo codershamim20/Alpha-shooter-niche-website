@@ -31,7 +31,7 @@ const handleDelete = id => {
 }
   return (
     <div>
-      <h1 className="text-center">My Order: { myorders.length}</h1>
+      <h1 className="text-center">My Order</h1>
   <div className="orders">
     <div className="row container">
       {myorders?.map((pd, index) => (

@@ -25,7 +25,7 @@ const Allorders = (props) => {
   }
   return (
     <div>
-      <h1 className="text-center">All Orders :{ orders.length}</h1>
+      <h1 className="text-center">All Orders</h1>
   <div className="orders">
     <div className="row container">
       {orders?.map((pd, index) => (
