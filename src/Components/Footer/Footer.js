@@ -14,7 +14,6 @@ const Footer = () => {
   <li className="list-group-item ">Contact Us</li>
   
 </ul></div>
-<<<<<<< HEAD
           <div className="col-5 mx-auto my-auto">ALPHA  SHOOTERS          
           </div>
           <div className="col-4 my-auto mx-auto">
@@ -24,15 +23,6 @@ const Footer = () => {
                 <Link className="navbar-brand container " to="/home"><img className="img-fluid" width="150" height="90" src="https://alphashooters.b-cdn.net/wp-content/uploads/2020/12/alpha-shooters-logo-text-400px.jpg" alt="" /></Link>
                 </div>
                 <small className="mx-auto">&copy; Copyright 2021, Alpha Shooters</small>
-=======
-          <div className="col-5 mx-auto my-auto">BEST TRAVEL AGENT
-          
-          </div>
-                <div className="col-4 my-auto mx-auto"><i class="fab fa-facebook"></i> <br/><i className="fab fa-instagram-square"></i>
-                <Link className="navbar-brand container " to="/home"><img className="img-fluid" width="120" height="80" src="https://www.obokash.com/images/logo.png" alt="" /></Link>
-                </div>
-                <small className="mx-auto">&copy; Copyright 2021, BEST TRAVEL</small>
->>>>>>> a6b5dbc676a926d9ec41bf33fd707c9987ebd38b
   </div>
 </div>
         

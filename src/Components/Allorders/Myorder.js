@@ -6,7 +6,7 @@ import useAuth from "../../hooks/useAuth";
 const Myorder = (props) => {
   const { user } = useAuth();
   const [myorders, setMyorders] = useState([])
-  const{_id,products,rating}=props.card||{}
+  
   useEffect(() => {
     fetch(`http://localhost:7000/allorders?email=${user?.email}`)
       .then((res) => res.json())

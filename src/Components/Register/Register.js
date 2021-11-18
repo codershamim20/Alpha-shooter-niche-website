@@ -1,10 +1,9 @@
-<<<<<<< HEAD
 
 import React, { useState } from 'react';
 
 
 import {  Alert, Form, Spinner } from 'react-bootstrap';
-import useAuth, {getAuth,createUserWithEmailAndPassword,signInWithEmailAndPassword } from '../../hooks/useAuth';
+import useAuth from '../../hooks/useAuth';
 import { NavLink, useHistory } from 'react-router-dom';
 
 
@@ -36,7 +35,6 @@ import { NavLink, useHistory } from 'react-router-dom';
           <div className="col-md-10 bg-light">
           <img src="https://images.all-free-download.com/images/graphicthumb/user_login_90303.jpg" alt="" />
             <div>
-               {/* <h2 className="text-primary">Please { isLogin?"Login":"Register"}</h2> */}
               <Form onSubmit={handleLoginSubmit}>
             <div className="form-input mt-5">
               <input
@@ -71,8 +69,6 @@ import { NavLink, useHistory } from 'react-router-dom';
                 placeholder="Re type Password"
               />
                   <br />
-                  {/* {message && <p>{ message}</p>}
-              <div className="login-regiater-btn m-4"> */}
                 <input type="submit" value={"Register"}/> <br/>
                 
               </div>
@@ -86,14 +82,6 @@ import { NavLink, useHistory } from 'react-router-dom';
             </div>
             
               <div >
-              
-                {/* <h1> Name{ user.displayName}</h1> */}
-          {/* <button
-                onClick={googleSignIn}
-                className="btn btn-warning mb-5"
-              >
-                Google Sign in
-              </button> */}
               {isLoading && <Spinner />}
                     {user?.email && <Alert severity="success">User Created successfully!</Alert>}
                     {authError && <Alert severity="error">{authError}</Alert>}
@@ -107,5 +95,3 @@ import { NavLink, useHistory } from 'react-router-dom';
 };
 
 export default Register;
-=======
->>>>>>> a6b5dbc676a926d9ec41bf33fd707c9987ebd38b

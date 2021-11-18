@@ -85,7 +85,7 @@ const useFirebase = () => {
             setIsLoading(false);
         });
         return () => unsubscribed;
-    }, [])
+    }, [auth])
 
     useEffect(() => {
         fetch(`http://localhost:7000/addUserInfo/${user.email}`)

@@ -3,7 +3,7 @@ import'./AddProduct.css'
 import { useForm } from "react-hook-form";
 import axios from 'axios';
 
-const AddService = () => {
+const AddProduct = () => {
     const { register, handleSubmit,reset } = useForm();
 
     const onSubmit = data => {
@@ -32,4 +32,4 @@ const AddService = () => {
     );
 };
 
-export default AddService;
+export default AddProduct;

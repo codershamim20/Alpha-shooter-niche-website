@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 
 const Allorders = (props) => {
     const [orders, setOrders] = useState([]);
-    const{_id,products,rating}=props.card||{}
   useEffect(() => {
     fetch("http://localhost:7000/allorders")
       .then((res) => res.json())
@@ -15,7 +14,7 @@ const Allorders = (props) => {
     })
       .then(res => res.json())
       .then(data => {
-          console.log(data);
+          // console.log(data);
           if (data.deletedCount) {
               alert("Deleted successfully")
             const remaining = orders.filter(order => order._id !== id);

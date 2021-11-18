@@ -14,7 +14,7 @@ const Productdetail = () => {
         fetch(`http://localhost:7000/productdetail/${id}`)
             .then(res => res.json())
         .then(data=>setCards(data))
-    },[])
+    },[id])
   const { Model, img, country, duration, rating} = cards || {}
   const onSubmit = data => {
     console.log(data);
@@ -43,7 +43,7 @@ const Productdetail = () => {
                 
         <p className="card-text">Technology We use From {country} </p>
         <p className="card-text ">Warrenty  {duration} </p>
-                {/* <p className="card-text">Customer Rating: {rating} </p> */}
+                
             <form className="my-3" onSubmit={handleSubmit(onSubmit)}>
             <input {...register("products", { required: true, maxLength: 100 })} className="my-3 rounded"defaultValue={Model} placeholder='Product Name' /> <br/>
             <input {...register("email", { required: true, maxLength: 100 })} className="my-3 rounded"defaultValue={user.email} placeholder='Product Name' /> <br/>

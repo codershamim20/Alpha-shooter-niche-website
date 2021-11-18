@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Switch, Route, Link, useRouteMatch } from "react-router-dom";
 
 import "./Dashboard.css";
 import useFirebase from "../../hooks/useFirebase";
 import Myorder from "../Allorders/Myorder";
 import Reviews from "../Reviews/Reviews";
-import Addreviews from "../Addreviews/Addreviews";
 import Pay from "../pay/Pay";
 import ManageProduct from "../ManageProduct.js/ManageProduct";
 import MakeAdmin from "../MakeAdmin/MakeAdmin";
@@ -16,7 +15,7 @@ import AdminRoute from "../../hooks/AdminRoute";
 
 const Dashbaord = () => {
   let { path, url } = useRouteMatch();
-  const { user, logout } = useFirebase();
+  const { logout } = useFirebase();
   const { admin } = useAuth();
   
   return (
