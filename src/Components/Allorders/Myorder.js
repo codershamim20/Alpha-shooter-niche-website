@@ -8,7 +8,7 @@ const Myorder = (props) => {
   const [myorders, setMyorders] = useState([])
   
   useEffect(() => {
-    fetch(`https://fierce-cliffs-19562.herokuapp.com/allorders?email=${user?.email}`)
+    fetch(`https://fierce-cliffs-19562.herokuapp.com/allorders/${user?.email}`)
       .then((res) => res.json())
       .then((data) => setMyorders(data));
   }, [user?.email]);
@@ -31,7 +31,7 @@ const handleDelete = id => {
 }
   return (
     <div>
-      <h1 className="text-center">My Order</h1>
+      <h1 className="text-center">My Order {myorders.length }</h1>
   <div className="orders">
     <div className="row container">
       {myorders?.map((pd, index) => (
